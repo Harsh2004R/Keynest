@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "heading"; /* name you will use in Chakra/React */
+  src: url("../assets/Fonts/midfielder/Midfielder\ -\ Personal\ Used.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "heading-otf";
+  src: url("../assets/Fonts/midfielder/Midfielder\ -\ Personal\ Used.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "text";
+  src: url("../assets/Fonts/midfielder/simpletix.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
