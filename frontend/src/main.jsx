@@ -1,4 +1,4 @@
-import { Provider } from "./components/ui/provider";
+import { Provider } from "./chakra/ui/provider";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
