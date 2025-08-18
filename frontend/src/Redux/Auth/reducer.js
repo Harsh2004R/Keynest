@@ -2,9 +2,9 @@ const authState = {
   token: "",
   isAuth: false,
 };
-export const reducer = () => {
-  switch (((state = authState), { type, payload })) {
+export const reducer = (state = authState, { type, payload }) => {
+  switch (type) {
     default:
-    return state;
+      return state;
   }
 };
