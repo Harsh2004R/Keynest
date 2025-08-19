@@ -16,18 +16,22 @@ import GithubButton from "../AppComponents/Buttons/GithubButton";
 import { FaEye } from "react-icons/fa";
 import { LuEyeClosed } from "react-icons/lu";
 import "../Styles/font.css";
-function Signup() {
+
+function Login() {
   const [show, setShow] = useState(false);
+  const MotionBox = motion.create(Box);
+  // useForm hook
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
   } = useForm();
-  const MotionBox = motion.create(Box);
+
   const onSubmit = (data) => {
     console.log("Form submitted:", data);
     reset();
+    //  API call here
   };
   const toggleEye = () => {
     setShow((prev) => !prev);
@@ -41,7 +45,7 @@ function Signup() {
         maxW="lg"
         w="full"
         bg="rgba(255, 255, 255, 0.07)"
-        hminH={{ base: "60vh", md: "70vh", lg: "80vh" }}
+        minH={{ base: "auto", md: "auto", lg: "auto" }}
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -58,12 +62,12 @@ function Signup() {
             fontSize={{ base: "3xl", md: "4xl", lg: "4xl" }}
             color={"#fff"}
           >
-            Register
+            Login
           </Text>
 
           <Flex flexDirection={"column"} justify={"space-between"}>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <Field.Root required>
+              <Field.Root py="14px" required>
                 <Field.Label fontFamily={"text"} color={"#fff"}>
                   Email <Field.RequiredIndicator />
                 </Field.Label>
@@ -90,40 +94,9 @@ function Signup() {
                     {errors.email.message}
                   </Text>
                 )}
-                <Field.HelperText fontSize={"12px"} fontFamily={"heading-otf"}>
-                  We'll never share your email.
-                </Field.HelperText>
               </Field.Root>
 
-              <Field.Root>
-                <Field.Label fontFamily={"text"} color={"#fff"}>
-                  Phone <Field.RequiredIndicator />
-                </Field.Label>
-                <Input
-                  color={"#799edaff"}
-                  type="number"
-                  _placeholder={{
-                    color: "grey.300",
-                    fontSize: "xs",
-                    fontFamily: "text",
-                    fontWeight: "500",
-                  }}
-                  {...register("phone", {
-                    pattern: {
-                      value: /^[0-9]{10}$/, // allows 10–15 digits
-                      message: "Enter a valid phone number",
-                    },
-                  })}
-                  placeholder="Your contact number"
-                />
-                {errors.phone && (
-                  <Text color="red.400" fontSize="xs">
-                    {errors.phone.message}
-                  </Text>
-                )}
-              </Field.Root>
-
-              <Field.Root required>
+              <Field.Root py="14px" required>
                 <Field.Label fontFamily={"text"} color={"#fff"}>
                   Password <Field.RequiredIndicator />
                 </Field.Label>
@@ -162,16 +135,13 @@ function Signup() {
                     {errors.password.message}
                   </Text>
                 )}
-                <Field.HelperText fontSize={"12px"} fontFamily={"heading-otf"}>
-                  Password length should be min 8 letters
-                </Field.HelperText>
               </Field.Root>
 
               <HStack
                 justifyContent={"space-evenly"}
-                py="15px"
                 spacing={4}
                 w="full"
+                py="14px"
                 mx="auto"
               >
                 <GoogleButton onClick={() => console.log("Google Login")} />
@@ -186,9 +156,10 @@ function Signup() {
                 color="#fff"
                 type="submit"
                 w="100%"
+                // isLoading={isSubmitting}
                 disabled={isSubmitting}
               >
-                Signup
+                Login
               </Button>
             </form>
           </Flex>
@@ -198,4 +169,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Login;
