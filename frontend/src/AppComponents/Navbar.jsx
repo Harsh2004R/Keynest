@@ -12,6 +12,7 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
+import brand_logo from "../Brand/Memoirra-300.png";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -21,41 +22,43 @@ function Navbar() {
       name: "Home",
       path: "/",
     },
-    {
-      name: "Auth",
-      path: "/auth",
-    },
-    {
-      name: "Product",
-      path: "/product",
-    },
-    {
-      name: "Private Page",
-      path: "/private",
-    },
-    {
-      name: "...",
-      path: "/auth2568",
-    },
-    {
-      name: "...",
-      path: "/auth24",
-    },
-    {
-      name: "...",
-      path: "/auth22",
-    },
+    // {
+    //   name: "Auth",
+    //   path: "/auth",
+    // },
+    // {
+    //   name: "Product",
+    //   path: "/product",
+    // },
+    // {
+    //   name: "Private Page",
+    //   path: "/private",
+    // },
+    // {
+    //   name: "...",
+    //   path: "/auth2568",
+    // },
+    // {
+    //   name: "...",
+    //   path: "/auth24",
+    // },
+    // {
+    //   name: "...",
+    //   path: "/auth22",
+    // },
   ];
 
   return (
     <Container
-      // border={"1px solid red"}
-      borderBottom={"1px solid #DADADA"}
+      borderBottom={"0.5px solid #484848ff"}
       maxW={"full"}
       minH={"60px"}
       px="2"
       pos={"relative"}
       zIndex={"1000"}
+      bg="#222222"
+      position={"fixed"}
+      top="0"
     >
       <Box display={{ base: "none", md: "block", lg: "block" }}>
         <Flex>
@@ -64,15 +67,16 @@ function Navbar() {
               borderRadius={"full"}
               w="60px"
               h="60px"
-              border={"1px solid lime"}
+              // border={"1px solid #0000EE"}
             >
               <Menu.Root>
                 <Menu.Trigger asChild>
                   <Image
                     borderRadius={"full"}
-                    w="90%"
-                    h="90%"
-                    src="https://avatar.iran.liara.run/public/1"
+                    w="98%"
+                    h="98%"
+                    // src="https://avatar.iran.liara.run/public/1"
+                    src={brand_logo}
                     alt="user.png"
                   />
                 </Menu.Trigger>
@@ -84,7 +88,7 @@ function Navbar() {
                           {" "}
                           <Menu.ItemGroupLabel>Profile</Menu.ItemGroupLabel>
                         </Link>
-                        <Link to="/auth">
+                        <Link to="/login">
                           {" "}
                           <Menu.ItemGroupLabel>Login</Menu.ItemGroupLabel>
                         </Link>
@@ -100,7 +104,7 @@ function Navbar() {
             {Links.map((el) => (
               <Center ml="20px" key={el.path}>
                 <Link to={el.path}>
-                  <Text>{el.name}</Text>
+                  <Text fontFamily={"text"}>{el.name}</Text>
                 </Link>
               </Center>
             ))}
@@ -147,7 +151,7 @@ function Navbar() {
                   borderBottom={"0.5px solid #a5a5a5ff"}
                 >
                   <Link to={el.path}>
-                    <Text>{el.name}</Text>
+                    <Text fontFamily={"text"}>{el.name}</Text>
                   </Link>
                 </Box>
               ))}
@@ -167,7 +171,8 @@ function Navbar() {
                 borderRadius={"full"}
                 w="90%"
                 h="90%"
-                src="https://avatar.iran.liara.run/public/1"
+                // src="https://avatar.iran.liara.run/public/1"
+                src={brand_logo}
                 alt=""
               />
             </Menu.Trigger>
@@ -179,13 +184,11 @@ function Navbar() {
                       {" "}
                       <Menu.ItemGroupLabel>Profile</Menu.ItemGroupLabel>
                     </Link>
-                    <Link to="/auth">
+                    <Link to="/login">
                       {" "}
                       <Menu.ItemGroupLabel>Login</Menu.ItemGroupLabel>
                     </Link>
-                    <Menu.ItemGroupLabel >
-                      Logout
-                    </Menu.ItemGroupLabel>
+                    <Menu.ItemGroupLabel>Logout</Menu.ItemGroupLabel>
                   </Menu.ItemGroup>
                 </Menu.Content>
               </Menu.Positioner>

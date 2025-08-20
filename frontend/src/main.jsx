@@ -1,4 +1,4 @@
-import { Provider } from "./chakra/ui/provider";
+import { Provider } from "./components/ui/provider";
 import { createRoot } from "react-dom/client";
 import { Provider as ReduxProdiver } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
