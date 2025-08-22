@@ -24,7 +24,11 @@ export default function Carousel() {
   const [slider, setSlider] = React.useState(null);
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "10px" });
-  const cards = ["https://res.cloudinary.com/djbe55v48/image/upload/v1755856604/memoirra_assets/Slide1_p7a1tu.png", "https://res.cloudinary.com/djbe55v48/image/upload/v1755856604/memoirra_assets/Slide2_cptixv.png", ""];
+  const cards = [
+    "https://res.cloudinary.com/djbe55v48/image/upload/v1755856604/memoirra_assets/Slide1_p7a1tu.png",
+    "https://res.cloudinary.com/djbe55v48/image/upload/v1755856604/memoirra_assets/Slide2_cptixv.png",
+    "",
+  ];
 
   return (
     <Box
@@ -80,10 +84,13 @@ export default function Carousel() {
             key={index}
             height={{ base: "60vh", md: "90vh", lg: "100vh" }}
             position="relative"
-            // border={"1px solid lime"}
+            border={"1px solid lime"}
+            // backgroundPosition="center"
+            // backgroundRepeat="no-repeat"
+            // backgroundSize="cover"
+            backgroundSize="contain"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
-            backgroundSize="cover"
             backgroundImage={`url(${url})`}
           />
         ))}
