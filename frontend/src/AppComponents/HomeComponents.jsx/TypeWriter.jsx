@@ -1,32 +1,34 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import { Center, Box, Text, Heading } from "@chakra-ui/react";
+import { Center, Text, Heading } from "@chakra-ui/react";
 function TypeWriter() {
   return (
     <Center
-      w="100%"
-      h={{base:"60vh",md:"60vh",lg:"50vh"}}
+      w={{base:"100%",md:"50%",lg:"50%"}}
+      h={{base:"30vh",md:"60vh",lg:"50vh"}}
       py="15px"
       as="section"
-      flexDirection={{ base: "column", md: "column", lg: "row" }}
+      flexDirection={{ base: "column", md: "column", lg: "column" }}
       px={2}
-    //   border="1px solid red"
+        // bg="rgba(255, 255, 255, 0.15)"
+      border="2px solid rgba(255, 255, 255, 0.3)"
+      borderRadius={"xl"}
     >
       <Center flexDir={"column"} w="100%" h="100%"
-    //    border="1px solid #fff"
+      //  border="1px solid #fff"
        >
         <Heading
           fontFamily={"heading-otf"}
-          fontSize={{ base: "3xl", md: "5xl" }}
-          mb={4}
-          color="#fff"
+          fontSize={{ base: "xl", md: "3xl" }}
+         mb={2}
+          color="#ef8126"
         >
-          Data <Text as="span" color="#ef8126"></Text>
+          Data <Text as="span" color=""></Text>
         </Heading>
 
         <Text
           as="div"
-          fontSize={{ base: "xl", md: "2xl" }}
+          fontSize={{ base: "sm", md: "xl" }}
           textShadow="0 0 25px #0062ffff"
           color={"#ffffffff"}
           fontWeight="medium"
@@ -52,23 +54,23 @@ function TypeWriter() {
       {/* Hashed typing box... */}
 
       <Center flexDir={"column"} w="100%" h="100%" 
-    //   border="1px solid #fff"
+      // border="1px solid #fff"
       >
         <Heading
           fontFamily={"heading-otf"}
-          fontSize={{ base: "3xl", md: "5xl" }}
-          mb={4}
+          fontSize={{ base: "xl", md: "3xl" }}
+          mb={2}
           color="#fff"
         >
           Hashed{" + "}
-          <Text as="span" color="#ef8126">
+          <Text as="span" color="#7ed957">
             Encrypted
           </Text>
         </Heading>
 
         <Text
           as="div"
-          fontSize={{ base: "xl", md: "2xl" }}
+          fontSize={{ base: "sm", md: "xl" }}
           textShadow="0 0 25px #0062ffff"
           color={"#ffffffff"}
           fontWeight="medium"
