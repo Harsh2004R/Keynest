@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import Hero from "../AppComponents/HomeComponents.jsx/Hero.jsx";
 import First from "../AppComponents/HomeComponents.jsx/First.jsx";
 import Carousel from "../AppComponents/HomeComponents.jsx/Carousel.jsx";
+import TypeWriter from "../AppComponents/HomeComponents.jsx/TypeWriter.jsx";
 function Home() {
   return (
     <>
@@ -16,6 +17,7 @@ function Home() {
         {/* <Hero /> */}
         {/* <First /> */}
         <Carousel />
+        <TypeWriter />
       </Box>
     </>
   );
