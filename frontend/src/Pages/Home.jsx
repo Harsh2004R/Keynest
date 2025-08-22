@@ -8,7 +8,7 @@ function Home() {
     <>
       <Box
         // border={"2px solid red"}
-        // mt="60px"
+        mt="70px"
         w="100%"
         h="300vh"
         bg="#000"
