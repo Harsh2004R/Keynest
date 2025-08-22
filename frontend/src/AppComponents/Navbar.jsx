@@ -22,14 +22,14 @@ function Navbar() {
       name: "Home",
       path: "/",
     },
-    // {
-    //   name: "Auth",
-    //   path: "/auth",
-    // },
-    // {
-    //   name: "Product",
-    //   path: "/product",
-    // },
+    {
+      name: "Dashboard",
+      path: "/dashboard",
+    },
+    {
+      name: "About",
+      path: "/about",
+    },
     // {
     //   name: "Private Page",
     //   path: "/private",
@@ -50,17 +50,24 @@ function Navbar() {
 
   return (
     <Container
-      borderBottom={"0.5px solid #484848ff"}
       maxW={"full"}
       minH={"60px"}
-      px="2"
+      px={{base:"2",md:"2",lg:"2"}}
       pos={"relative"}
       zIndex={"1000"}
-      bg="#222222"
       position={"fixed"}
       top="0"
     >
-      <Box display={{ base: "none", md: "block", lg: "block" }}>
+      <Box
+        display={{ base: "none", md: "block", lg: "block" }}
+        bg="rgba(255, 255, 255, 0.15)"
+        backdropFilter="blur(12px)"
+        WebkitBackdropFilter="blur(12px)"
+        border="1px solid rgba(255, 255, 255, 0.3)"
+        boxShadow="0 8px 30px rgba(0,0,0,0.2)"
+        p={{base:"0",md:"1",lg:"1"}}
+        borderRadius={"full"}
+      >
         <Flex>
           <Box w={{ base: "40%", md: "40%", lg: "40%" }} h="60px" flex="1">
             <Center
@@ -69,7 +76,7 @@ function Navbar() {
               h="60px"
               // border={"1px solid #0000EE"}
             >
-              <Menu.Root>
+              <Menu.Root >
                 <Menu.Trigger asChild>
                   <Image
                     borderRadius={"full"}
