@@ -4,23 +4,26 @@ import { Center, Text, Heading } from "@chakra-ui/react";
 function TypeWriter() {
   return (
     <Center
-      w={{base:"100%",md:"50%",lg:"50%"}}
-      h={{base:"30vh",md:"60vh",lg:"50vh"}}
+      w={{ base: "100%", md: "50%", lg: "50%" }}
+      h={{ base: "30vh", md: "60vh", lg: "50vh" }}
       py="15px"
       as="section"
       flexDirection={{ base: "column", md: "column", lg: "column" }}
       px={2}
-        // bg="rgba(255, 255, 255, 0.15)"
+      // bg="rgba(255, 255, 255, 0.15)"
       border="2px solid rgba(255, 255, 255, 0.3)"
       borderRadius={"xl"}
     >
-      <Center flexDir={"column"} w="100%" h="100%"
-      //  border="1px solid #fff"
-       >
+      <Center
+        flexDir={"column"}
+        w="100%"
+        h="100%"
+        //  border="1px solid #fff"
+      >
         <Heading
           fontFamily={"heading-otf"}
           fontSize={{ base: "xl", md: "3xl" }}
-         mb={2}
+          mb={2}
           color="#ef8126"
         >
           Data <Text as="span" color=""></Text>
@@ -53,8 +56,11 @@ function TypeWriter() {
 
       {/* Hashed typing box... */}
 
-      <Center flexDir={"column"} w="100%" h="100%" 
-      // border="1px solid #fff"
+      <Center
+        flexDir={"column"}
+        w="100%"
+        h="100%"
+        // border="1px solid #fff"
       >
         <Heading
           fontFamily={"heading-otf"}
