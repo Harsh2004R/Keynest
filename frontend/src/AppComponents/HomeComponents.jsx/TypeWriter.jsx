@@ -4,7 +4,7 @@ import { Center, Text, Heading } from "@chakra-ui/react";
 function TypeWriter() {
   return (
     <Center
-      w={{ base: "100%", md: "50%", lg: "50%" }}
+      w={{ base: "100%", md: "100%", lg: "100%" }}
       h={{ base: "30vh", md: "60vh", lg: "50vh" }}
       py="15px"
       as="section"

@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { Box, Center, Text, Heading } from "@chakra-ui/react";
-import Typewriter from "typewriter-effect";
+import TypeWriter from "./TypeWriter.jsx"
 export default function Hero() {
   const backgroundVideo ="https://res.cloudinary.com/djbe55v48/video/upload/v1755673751/memoirra_assets/HomeV1_otg17v.mp4";
   const videoRef = useRef();
@@ -11,6 +11,7 @@ export default function Hero() {
   return (
     <Center
       width="100%"
+      justifyContent={"space-around"}
       flexDirection={{ base: "column", md: "row", lg: "row" }}
       // border={"2px solid blue"}
       minH={{ base: "50vh", md: "80vh", lg: "60vh" }}
@@ -18,7 +19,7 @@ export default function Hero() {
       <Box
         as="section"
         w={{ base: "100%", md: "40%" ,lg:"40%"}}
-        minH={{base:"30vh",md:"80vh",lg:"60vh"}}
+       h="100%"
         display="flex"
         alignItems="center"
         justifyContent="center"
@@ -26,47 +27,17 @@ export default function Hero() {
         color="white"
         textAlign="center"
         px={2}
+        // border="3px solid cyan"
       >
-        <Heading
-          fontFamily={"heading-otf"}
-          fontSize={{ base: "3xl", md: "5xl" }}
-          mb={4}
-          color="#fff"
-        >
-          Welcome to{" "}
-          <Text as="span" color="#ef8126">
-            Memoirra
-          </Text>
-        </Heading>
+       <TypeWriter/>
 
-        <Text
-          as="div"
-          fontSize={{ base: "xl", md: "2xl" }}
-          textShadow="0 0 25px #0062ffff"
-          color={"#ffffffff"}
-          fontWeight="medium"
-          fontFamily={"text"}
-        >
-          <Typewriter
-            options={{
-              strings: [
-                "Your Digital Vault",
-                "Store your gmail | password | links and many more Securely",
-                "Access Anywhere, Anytime ☁️",
-                "Top Privacy which You Can Trust 🛡️ ",
-              ],
-              autoStart: true,
-              loop: true,
-              delay: 75,
-              deleteSpeed: 30,
-            }}
-          />
-        </Text>
       </Box>
       <Box
-        width={{ base: "100%", md: "65%", lg: "60%" }}
+        width={{ base: "100%", md: "65%", lg: "55%" }}
         minH={{ base: "20vh", md: "50vh", lg: "60vh" }}
         display="flex"
+        // border={"1px solid cyan"}
+        mt={{base:"10px",md:"none",lg:"none"}}
         justifyContent="center"
         alignItems="center"
         position="relative"
