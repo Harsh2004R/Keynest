@@ -36,6 +36,7 @@ function Home() {
           </Heading>
 
           <TypeWriter />
+         
         </Center>
       </Box>
     </>
