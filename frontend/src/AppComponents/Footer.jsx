@@ -3,12 +3,12 @@ import {
   Box,
   Text,
   HStack,
-  Link,
   Icon,
   VStack,
   SimpleGrid,
   Image,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail, MdSecurity } from "react-icons/md";
@@ -62,6 +62,7 @@ export default function Footer() {
           {["Home", "Features", "Security", "Support"].map((link) => (
             <Link
               key={link}
+              to={link}
               color="gray.500"
               href="#"
               _hover={{
@@ -71,7 +72,7 @@ export default function Footer() {
               }}
               transition="all 0.2s ease-in-out"
             >
-              {link}
+              <Text>{link}</Text>
             </Link>
           ))}
         </VStack>
@@ -106,16 +107,23 @@ export default function Footer() {
       {/* Bottom Social + Copy */}
       <VStack spacing={4} mt={4}>
         <HStack spacing={6}>
-          {[FaGithub, FaLinkedin].map((IconComp, i) => (
-            <MotionIcon
-              key={i}
-              as={IconComp}
-              boxSize={6}
-              cursor="pointer"
-              whileHover={{ scale: 1.3, rotate: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              _hover={{ color: "teal.300" }}
-            />
+          {[
+            { icon: FaGithub, link: "https://github.com/Harsh2004R" },
+            {
+              icon: FaLinkedin,
+              link: "https://www.linkedin.com/in/harsh-sharma-0545aa25b/",
+            },
+          ].map((item, i) => (
+            <Link to={item.link} key={i}>
+              <MotionIcon
+                as={item.icon} 
+                boxSize={6}
+                cursor="pointer"
+                whileHover={{ scale: 1.3, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                _hover={{ color: "teal.300" }}
+              />
+            </Link>
           ))}
         </HStack>
         <Text fontSize="sm" color="gray.500">
