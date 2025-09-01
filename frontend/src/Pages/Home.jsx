@@ -30,8 +30,9 @@ function Home() {
             w={{ base: "100%", md: "90%", lg: "80%" }}
             mt={{ base: "20px", md: "50px", lg: "50px" }}
             mb={{ base: "20px", md: "50px", lg: "50px" }}
-            fontSize={{ base: "2xl", md: "3xl", lg: "6xl" }}
+            fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}
             fontFamily={"heading-otf"}
+            fontWeight={"200"}
           >
             An enterprise assets management experience like no other
           </Text>
