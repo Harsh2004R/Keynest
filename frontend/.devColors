@@ -2,3 +2,5 @@ coralColor = #ef8126
 limeColor = #7ed957
 footer_heading = #e2e2e2dd
 
+Target_audience_component = ["#FFECA7","#A6ECFF","#ABFFE9","#ECC2FF"]
+

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Center, Heading ,Text} from "@chakra-ui/react";
 import Hero from "../AppComponents/HomeComponents.jsx/Hero.jsx";
 import Carousel from "../AppComponents/HomeComponents.jsx/Carousel.jsx";
-import TypeWriter from "../AppComponents/HomeComponents.jsx/TypeWriter.jsx";
+import TargetAudience from "../AppComponents/HomeComponents.jsx/TargetAudience.jsx";
 import Footer from "../AppComponents/Footer.jsx"
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
         // border={"2px solid red"}
         mt="70px"
         w="100%"
-        h="300vh"
+        h="600vh"
         bg="#000"
       >
         <Carousel />
@@ -30,14 +30,16 @@ function Home() {
             w={{ base: "100%", md: "90%", lg: "80%" }}
             mt={{ base: "20px", md: "50px", lg: "50px" }}
             mb={{ base: "20px", md: "50px", lg: "50px" }}
-            fontSize={{ base: "xl", md: "2xl", lg: "4xl" }}
-            fontFamily={"heading-otf"}
+            fontSize={{ base: "30px", md: "40px", lg: "50px" }}
+            fontFamily={"main"}
             fontWeight={"200"}
           >
             An enterprise assets management experience like no other
           </Text>
           <Hero />
         </Center>
+
+        <TargetAudience />
       </Box>
       <Footer/>
     </>
